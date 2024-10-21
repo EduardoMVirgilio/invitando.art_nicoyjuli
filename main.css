@@ -1,0 +1,624 @@
+@import url("https://use.typekit.net/rby8hyo.css");
+
+@font-face {
+    font-family: prata;
+    src: url(font/Prata-Regular.ttf);
+}
+
+
+
+:root {
+    --primary: #193542;
+    --secundary: #bdccad;
+    --text-font: "brandon-grotesque", sans-serif;
+    --text-font-decoration: "prata"
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    border: none;
+    box-sizing: border-box;
+    font-family: var(--text-font);
+}
+
+body {
+    background-image: url("assets/texturafondoconolives.webp");
+    background-size: cover;
+}
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#olivetop {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+#portada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+
+    & picture img {
+        width: 50%;
+        translate: 50% 0%;
+
+    }
+
+    & h1 {
+        text-align: center;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--primary);
+
+        & span {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--text-font-decoration);
+            color: var(--primary);
+            font-weight: 300;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -15%;
+                width: calc(50% - 2rem);
+                height: 0.2rem;
+                background-color: var(--primary);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: -10%;
+                width: calc(50% - 2rem);
+                height: .2rem;
+                background-color: var(--primary);
+            }
+        }
+    }
+
+    & p {
+        color: var(--primary);
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        font-size: 200%;
+    }
+
+    & p:nth-child(3) {
+        width: 100%;
+        overflow: hidden;
+        height: 20vh;
+        margin-top: 3rem;
+        font-size: 250%;
+        letter-spacing: 0.7rem;
+        background-color: var(--secundary);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -10%;
+            width: calc(25%);
+            height: 100%;
+            background-image: url('assets/olivefecha2@2x.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -10%;
+            width: calc(25%);
+            height: 100%;
+            background-image: url('assets/olivefecha1@2x.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+#cuerpo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10%;
+
+    & ul {
+        list-style: none;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        align-items: center;
+
+        & li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & picture {
+                width: 50%;
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            & h2 {
+                text-transform: uppercase;
+                letter-spacing: 0.4rem;
+                color: var(--primary);
+                margin-top: 1rem;
+            }
+
+            & p {
+                color: var(--primary);
+                font-size: x-large;
+                font-weight: 400;
+                margin-top: 1rem;
+
+                &:nth-child(6) {
+                    font-weight: 300;
+                    font-size: medium;
+                }
+            }
+
+            a {
+                background-color: var(--primary);
+                font-size: x-large;
+                font-weight: 300;
+                padding: 0.5rem 3rem;
+                color: aliceblue;
+                margin: 3rem 0 0;
+                border-radius: 3rem;
+                text-decoration: none;
+                cursor: pointer;
+                transition: all 300ms ease-in-out;
+
+                &:hover {
+                    box-shadow: 0px 0px 12px 0 rgb(36, 75, 89, .7);
+                    background-color: #8eb8c7;
+                    color: aliceblue;
+                }
+
+                &:active {
+                    background-color: #244b59;
+                    color: aliceblue;
+                }
+            }
+
+
+            &#itinerario {
+                background-image: url("assets/watercoloritinerario.png");
+                background-size: auto 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                picture {
+                    width: 50%;
+                }
+            }
+
+            &#rsvp {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &#rsvp p {
+                font-size: x-large;
+                font-weight: 400;
+            }
+
+            &#rsvp p:nth-child(4) {
+                font-size: large;
+                font-weight: 300;
+            }
+
+            &#agendar picture img {
+                width: 100%;
+            }
+
+
+            &#regalo {
+                & p {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: x-large;
+                    font-weight: 400;
+                }
+
+                & #modalDialog {
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(189, 204, 173, .7);
+                    transition: opacity 1s;
+                    opacity: 0;
+
+                    & dl {
+                        background: rgba(189, 204, 173);
+                        padding: 6rem;
+                        border-radius: 3rem;
+                        color: #193542;
+                        font-size: 200%;
+                        gap: 0.5rem;
+
+                        & dt {
+                            color: aliceblue;
+                        }
+                    }
+
+
+                    &[open] {
+                        opacity: 1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+
+            &#dresscode {
+                & p {
+                    font-size: x-large;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+}
+
+h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: var(--primary);
+    margin-top: 1rem;
+}
+
+.temporizador {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.temporizador .bloque {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    width: 6rem;
+    background-color: var(--secundary);
+    border-radius: 50%;
+    position: relative;
+}
+
+.temporizador .bloque img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.temporizador .bloque span {
+    font-size: 2rem;
+}
+
+.temporizador .bloque p {
+    font-size: small;
+}
+
+
+@media (max-width: 720px) {
+    body {
+        background-image: url("assets/texturapapelmachemobile.webp");
+        background-size: cover;
+    }
+
+    #portada {
+        gap: 1rem;
+
+        & picture img {
+            width: 80%;
+            translate: 10% 5%;
+        }
+
+        & h1 {
+            font-size: xx-large;
+            margin-top: 20%;
+        }
+
+        & p {
+            margin-top: 10%;
+            font-size: larger;
+        }
+
+        & p:nth-child(3) {
+            font-size: large;
+            height: 10vh;
+            letter-spacing: 0.2rem;
+            font-weight: 500;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -15%;
+                width: calc(25%);
+                height: 100%;
+                background-image: url('assets/olivefecha2@2x.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 100%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: -15%;
+                width: calc(25%);
+                height: 100%;
+                background-image: url('assets/olivefecha1@2x.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 10%;
+            }
+        }
+    }
+
+    #cuerpo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10%;
+
+        & ul {
+            list-style: none;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+            align-items: center;
+
+            & li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                & picture {
+                    width: 50%;
+                    height: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                & h2 {
+                    text-transform: uppercase;
+                    letter-spacing: 0.4rem;
+                    color: var(--primary);
+                    margin-top: 1rem;
+                    font-size: larger;
+                }
+
+                & p {
+                    color: var(--primary);
+                    font-size: x-large;
+                    font-weight: 400;
+                    margin-top: 1rem;
+
+                    &:nth-child(6) {
+                        font-weight: 300;
+                        font-size: medium;
+                    }
+                }
+
+                a {
+                    background-color: var(--primary);
+                    font-size: larger;
+                    font-weight: 300;
+                    padding: 0.2rem 2rem;
+                    color: aliceblue;
+                    border-radius: 3rem;
+                    text-decoration: none;
+                    transition: all 300ms ease-in-out;
+
+                    &:hover {
+                        box-shadow: 0px 0px 12px 0 rgb(36, 75, 89, .7);
+                        background-color: #8eb8c7;
+                        color: aliceblue;
+                    }
+
+                    &:active {
+                        background-color: #244b59;
+                        color: aliceblue;
+                    }
+                }
+
+                &#itinerario {
+                    background-image: url("assets/watercoloritinerariomobileok.png");
+                    background-size: 100vw 50vh;
+                    background-position: center;
+                    background-repeat: no-repeat;
+
+                    picture {
+                        width: 100%;
+                    }
+                }
+
+                &#rsvp {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    & p {
+                        font-size: x-large;
+                        font-weight: 400;
+
+                        &:nth-child(4) {
+                            font-size: large;
+                            font-weight: 300;
+                        }
+                    }
+
+                }
+
+
+                &#agendar picture img {
+                width: 100%;
+            }
+
+
+                &#regalo {
+                    & p {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: x-large;
+                        font-weight: 400;
+                    }
+
+                    & #modalDialog {
+                        position: fixed;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(189, 204, 173, .7);
+                        transition: opacity 1s;
+                        opacity: 0;
+
+                        & dl {
+                            background: rgba(189, 204, 173);
+                            padding: 6rem;
+                            border-radius: 3rem;
+                            color: #193542;
+                            font-size: 135%;
+                            gap: 0.5rem;
+
+                            & dt {
+                                color: aliceblue;
+                            }
+                        }
+
+
+                        &[open] {
+                            opacity: 1;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+
+                &#dresscode {
+                    & p {
+                        font-size: x-large;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+    }
+
+    h2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        color: var(--primary);
+        margin-top: 2rem;
+    }
+
+    .temporizador {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .temporizador .bloque {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1/1;
+        width: 6rem;
+        background-color: var(--secundary);
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .temporizador .bloque img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .temporizador .bloque span {
+        font-size: 1.5rem;
+    }
+
+    .temporizador .bloque p {
+        font-size: small;
+    }
+}
